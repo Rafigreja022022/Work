@@ -14,7 +14,7 @@ class Pages {
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
-        cy  .screenshot('PaginaLogin');
+        cy  .screenshot('001-PaginaLogin');
         
         cy  .get(el.campoUserName)
             .should('be.visible')
@@ -26,12 +26,12 @@ class Pages {
             .should('be.have', 'password')
         cy  .get(el.botaoLogin)
             .click()
-        cy  .screenshot('DadosLoginPreenchidos');
+        cy  .screenshot('002-DadosLoginPreenchidos');
         
         cy  .get('[data-testid="input"]')
             .should('be.visible')
             .should('be.have', '[data-testid="input"]')
-        cy  .screenshot('LoginRealizadoComSucesso');
+        cy  .screenshot('003-LoginRealizadoComSucesso');
 
     }
 
@@ -40,7 +40,7 @@ class Pages {
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
-        cy  .screenshot('PaginaLogin');
+        cy  .screenshot('01-PaginaLogin');
         
         cy  .get(el.campoUserName)
             .should('be.visible')
@@ -52,12 +52,12 @@ class Pages {
             .should('be.have', 'password')
         cy  .get(el.botaoLogin)
             .click()
-        cy  .screenshot('DadosLoginPreenchidos');
+        cy  .screenshot('02-DadosLoginPreenchidos');
 
         cy  .get('[data-testid="input"]')
             .should('be.visible')
             .should('be.have', '[data-testid="input"]')
-        cy  .screenshot('LoginRealizadoComSucesso');
+        cy  .screenshot('03-LoginRealizadoComSucesso');
 
         cy  .get('#cadastrar-detran > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
             .should('be.visible')
@@ -70,10 +70,8 @@ class Pages {
             .should('be.visible')
             .focus()
             .type('SP - São Paulo')
-            //.get('.sc-jgbSNz')
-            .focus()
-            //.should('be.value', 'SP - São Paulo')
-        
+        cy  .xpath('//*[@id=":r3:-option-0"]')
+            .click()
         cy  .get(el.campoCNPJDetran)
             .should('be.visible')
             .type(Cypress.env('CNPJDetran'))
@@ -103,10 +101,10 @@ class Pages {
             .should('be.visible')
             .type(Cypress.env('EmailDetran'))
             .should('be.have', 'EmailDetran')
-        cy  .screenshot('DadosDetranPreenchidos');
+        cy  .screenshot('04-DadosDetranPreenchidos');
         cy  .get(':nth-child(2) > [data-testid="button-component"]')
             .click()
-        cy  .screenshot('DadosDetranEnviadoComSucesso')
+        cy  .screenshot('05-DadosDetranEnviadoComSucesso')
 
     }
 
@@ -115,7 +113,7 @@ class Pages {
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
-        cy  .screenshot('PaginaLogin');
+        cy  .screenshot('1-PaginaLogin');
         
         cy  .get(el.campoUserName)
             .should('be.visible')
@@ -127,11 +125,11 @@ class Pages {
             .should('be.have', 'password')
         cy  .get(el.botaoLogin)
             .click()
-        cy  .screenshot('DadosLoginPreenchidos');
+        cy  .screenshot('2-DadosLoginPreenchidos');
 
-        cy  .get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
+        cy  .get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')       // Dados Contrato
             .should('be.visible')
-        cy  .screenshot('SistemaLogado')
+        cy  .screenshot('3-SistemaLogado')
         cy  .get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
             .click()
         cy  .get(el.campoContrato)
@@ -218,9 +216,9 @@ class Pages {
             .click()
         cy  .get('.lkiREi > .hIA-dKQ > .sc-ckMVTt > :nth-child(2) > .sc-cOFTSb > .sc-fXynhf')
             .click()
-        cy  .screenshot('ContratoPreenchido')
+        cy  .screenshot('4-ContratoPreenchido')
 
-        cy  .get('.sc-jGprRt > :nth-child(2)')
+        cy  .get('.sc-jGprRt > :nth-child(2)')                                          // Dados Consórcio
             .click()
         cy  .get(el.camponumerogrupo)
             .focus()
@@ -230,9 +228,9 @@ class Pages {
             .focus()
             .type(Cypress.env('numerocota'))
             .should('be.have', 'numerocota')
+        cy  .screenshot('5-DadosConsorcio')
 
-
-        cy  .get('.sc-jGprRt > :nth-child(3)')
+        cy  .get('.sc-jGprRt > :nth-child(3)')                                          // Dados Aditivo
             .click()
         cy  .get(el.camponumeroaditivo)
             .focus()
@@ -244,7 +242,7 @@ class Pages {
             .should('be.have', 'dataaditivo')
         cy  .get(':nth-child(3) > .sc-cOFTSb > .sc-fXynhf')
             .click()
-        cy  .screenshot('DadosAditivo')
+        cy  .screenshot('6-DadosAditivo')
 
         cy  .get('.sc-jGprRt > :nth-child(4)')                                      // Dados Vendedor
             .click()
@@ -252,7 +250,7 @@ class Pages {
             .focus()
             .type(Cypress.env('cnpjvendedor'))
             .should('be.have', 'cnpjvendedor')
-        cy  .screenshot('DadosVendedor')
+        cy  .screenshot('7-DadosVendedor')
 
         cy  .get('.sc-jGprRt > :nth-child(5)')                                      // Dados Recebedor
             .click()
@@ -260,7 +258,7 @@ class Pages {
             .focus()
             .type(Cypress.env('cpfrecebedor'))
             .should('be.have', 'cpfrecebedor')
-        cy  .screenshot('DadosRecebedor')
+        cy  .screenshot('8-DadosRecebedor')
 
         cy  .get('.sc-jGprRt > :nth-child(6)')                                      // Dados Veiculos
             .click()
@@ -309,7 +307,7 @@ class Pages {
             .focus()
             .type(Cypress.env('especie'))
             .should('be.have', 'especie')    
-        cy  .screenshot('DadosVeiculos')
+        cy  .screenshot('9-DadosVeiculos')
 
         cy  .get('.sc-jGprRt > :nth-child(7)')                                      // Dados Credor
             .click()
@@ -337,7 +335,7 @@ class Pages {
             .focus()
             .type(Cypress.env('telefonecredor'))
             .should('be.have', 'telefonecredor')
-        cy  .screenshot('DadosCredor')
+        cy  .screenshot('10-DadosCredor')
         
         cy  .get('.sc-jGprRt > :nth-child(8)')                                      // Dados Devedor
             .click()
@@ -365,11 +363,11 @@ class Pages {
             .focus()
             .type(Cypress.env('telefonedevedor'))
             .should('be.have', 'telefonedevedor')
-        cy  .screenshot('DadosDevedor')
+        cy  .screenshot('11-DadosDevedor')
         
         cy  .get('.sc-jGprRt > :nth-child(9)')                                      // Imagens
             .click()
-        cy  .screenshot('DadosImagens')
+        cy  .screenshot('12-DadosImagens')
         
         cy  .get('.sc-jGprRt > :nth-child(10)')                                     // Terc. Garantidor
             .click()
@@ -397,14 +395,15 @@ class Pages {
             .focus()
             .type(Cypress.env('telefoneterc'))
             .should('be.have', 'telefoneterc')
-        cy  .screenshot('DadosTercGarantidor')
+        cy  .screenshot('13-DadosTercGarantidor')
         
         cy  .get('[data-testid="button-component"]')                                    // Enviar Dados
             .click()
-        cy  .screenshot('DadosEnviadosComSucesso')    
+        cy  .screenshot('14-DadosEnviadosComSucesso')    
 
 
     }
+
 
     testeXPath() {                                                              // Testar plugin para xpath
         cy.visit(Cypress.env('Url'))
