@@ -1,0 +1,30 @@
+{
+  "name": "bureau_cypress",
+  "version": "1.0.0",
+  "description": "Automação do sistema Bureau - Idea Maker",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run --config video=true --env allure=true",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "apagar:resultado": "rm -r allure-results",
+    "apagar:report": "rm -r allure-report",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rafael Igreja",
+  "license": "Idea Maker",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cypress": "^12.8.1"
+  },
+  "dependencies": {
+    "allure": "^0.0.0",
+    "cypress-xpath": "^2.0.1",
+    "git": "^2.15.0",
+    "node": "^18.15.0",
+    "npm": "^9.5.0",
+    "yarn": "^1.22.19"
+  }
+}
