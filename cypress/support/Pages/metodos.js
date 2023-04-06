@@ -433,6 +433,34 @@ class Pages {
 
     }
 
+    pesquisar() {
+        cy.visit(Cypress.env('Url'))
+        cy  .title()
+            .should('be.equal', 'Bureau - Idea Maker')
+        cy  .screenshot('PaginaLogin');
+        
+        cy  .get(el.campoUserName)
+            .should('be.visible')
+            .type(Cypress.env('username'))
+            .should('be.have', 'username')
+        cy  .get(el.campoPassword)
+            .should('be.visible')
+            .type(Cypress.env('password'))
+            .should('be.have', 'password')
+        cy  .get(el.botaoLogin)
+            .click()
+        cy  .screenshot('DadosLoginPreenchidos');
+        
+        cy  .get('[data-testid="input"]')
+            .should('be.visible')
+            .should('be.have', '[data-testid="input"]')
+        cy  .screenshot('LoginRealizadoComSucesso');
+        cy  .xpath('//*[@id=":r2:"]')
+            .focus()
+            .type('Rafael')
+
+
+    }
 
 }
 

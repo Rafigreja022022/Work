@@ -19,12 +19,17 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-2 - Preencher Contrato', () => {
+   it.only('CT-1 - Pesquisar um contrato preenchido', () => {
+      Pages.Pesquisar();
+   })
+
+
+   it.only('CT-2 - Preencher um Contrato', () => {
       Pages.preencherContrato();
    })
 
-   
-   it('CT-8 - Preencher dados de um Detran', () => {
+
+   it.only('CT-8 - Preencher dados para um Detran', () => {
       Pages.preencherDadosDetran();
 
    })
