@@ -1,9 +1,19 @@
 
 export const ELEMENTS = {
     
+    // Login
+    
     campoUserName: ':nth-child(2) > .sc-ftvSup > [data-testid="input"]',
     campoPassword: ':nth-child(3) > .sc-ftvSup > [data-testid="input"]',
     botaoLogin: '.cdfHIn > [data-testid="button-component"]',
+    
+    
+    // Contratos
+    
+    campoPesquisar: '',
+    
+
+    // Registrar Contrato
     
     campoContrato: ':nth-child(1) > .fzVBCR > .sc-ftvSup > [data-testid="input"]',
     campoDataVigente: '.llPXw > :nth-child(1) > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
@@ -71,7 +81,62 @@ export const ELEMENTS = {
     campoTelefoneTerc: ':nth-child(4) > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
 
 
-    //detran
+    // Enviar Imagens
+    
+    campoNContrato: '',
+    campoEnviar: '',
+    campoProcurarImagem: '',
+    
+    
+    // Cancelamento de Contrato
+
+    campoNProtocolo: '',
+    campoNContrato: '',
+    campoNRegistro: '',
+    campoNChassi: '',
+    campoAdcionar: '',
+    campoCarregar: '',
+    campoExpotarRetorno: '',
+    campoCancelarContratos: '',
+
+
+    // Cadastrar Instituição
+
+    campoNomeDaInstituicao: '',
+    campoCodigoCad: '',
+    campoCNPJCad: '',
+    campoTelefoneCad: '',
+    campoCEPCad: '',
+    campoNumCad: '',
+
+    campoNomeCad: '',
+    campoCPFCad: '',
+    campoFuncaoCad: '',
+    campoEmailCad: '',
+    campoTelefoneCad: '',
+    campoValidadeNoDetran: '',
+
+    campoLimparCad: '',
+    campoCadastrarCad: '',
+
+
+    // Registro de Faturamento
+    
+    campoBanco: '',
+    campoData: '',
+    campoDatas: '',
+    campoBaixarRegistro: '',
+
+    
+    // Gerar Relatórios
+    
+    campoPeriodo: '',
+    campoEstado: '',
+    campoBuscarInstituicao: '',
+    campoExportarTodos: '',
+    
+    
+    // Cadastrar Departamento de transito (detran)
 
     campoEstadoDetran: '[data-testid="select-text-field"] > .sc-ftvSup > [data-testid="input"]',
     campoCNPJDetran: '.fjtwOd > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
