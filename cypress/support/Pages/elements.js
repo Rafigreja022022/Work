@@ -48,8 +48,7 @@ export const ELEMENTS = {
     campoespecie: ':nth-child(4) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
 
     camponomecredor: '.fzVBCR > .sc-ftvSup > [data-testid="input"]',
-    campocnpjcredor: ':nth-child(1) > :nth-child(3) > .sc-ftvSup > [data-testid="input"]',
-    campocpfcredor: ':nth-child(1) > :nth-child(3) > .sc-ftvSup > [data-testid="input"]',
+    campocnpjcredor: '.eValoj > .sc-ftvSup > [data-testid="input"]',
     campocepcredor: '[style="display: flex;"] > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
     camponumerocredor: ':nth-child(2) > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
     campoemailcredor: '.cSoqSQ > :nth-child(4) > :nth-child(1) > .sc-ftvSup > [data-testid="input"]',
