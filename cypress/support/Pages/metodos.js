@@ -547,10 +547,8 @@ class Pages {
         cy  .xpath('//*[@id=":r3:"]')
             .should('be.visible')
             .type(Cypress.env('contrato'))
-        cy  .get('input[type="file"]')
-        cy  .get('.jvfZKD > .sc-dsQDmV')
-            .click()
-            //.selectFile('cypress/screenshots/3_1 - Pagina Login.png')
+        cy  .get('label > .sc-cOFTSb')
+            .selectfile()
         cy  .screenshot('3_5 - Contrato e imagem carregados')
 
         cy  .get('.WGDlc > .sc-cOFTSb')
