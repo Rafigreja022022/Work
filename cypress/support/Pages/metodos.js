@@ -434,7 +434,7 @@ class Pages {
     }
 
     
-    Pesquisar() {
+    Pesquisar() {                                                               // Pesquisa um contrato preenchido anteriormente
         cy.visit(Cypress.env('Url'))
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -513,6 +513,136 @@ class Pages {
             .should('be.visible')
         cy  .screenshot('1_14 - Terc garantidor pesquisado com sucesso')
 
+
+    }
+
+
+    EnviarImagens() {                                                           // Enviar anexos
+        cy  .visit(Cypress.env('Url'));
+        cy  .title()
+            .should('be.equal', 'Bureau - Idea Maker')
+        cy  .screenshot('3_1 - Pagina Login');
+        
+        cy  .get(el.campoUserName)
+            .should('be.visible')
+            .type(Cypress.env('username'))
+            .should('be.have', 'username')
+        cy  .get(el.campoPassword)
+            .should('be.visible')
+            .type(Cypress.env('password'))
+            .should('be.have', 'password')
+        cy  .get(el.botaoLogin)
+            .click()
+        cy  .screenshot('3_2 - Dados do Login Preenchidos');
+        
+        cy  .get('[data-testid="input"]')
+            .should('be.visible')
+            .should('be.have', '[data-testid="input"]')
+        cy  .screenshot('3_3 - Login Realizado Com Sucesso');
+
+    }
+
+
+    CancelamentoDeContrato() {                                                  // Cancelar um contrato preenchido
+        cy  .visit(Cypress.env('Url'));
+        cy  .title()
+            .should('be.equal', 'Bureau - Idea Maker')
+        cy  .screenshot('4_1 - Pagina Login');
+        
+        cy  .get(el.campoUserName)
+            .should('be.visible')
+            .type(Cypress.env('username'))
+            .should('be.have', 'username')
+        cy  .get(el.campoPassword)
+            .should('be.visible')
+            .type(Cypress.env('password'))
+            .should('be.have', 'password')
+        cy  .get(el.botaoLogin)
+            .click()
+        cy  .screenshot('4_2 - Dados do Login Preenchidos');
+        
+        cy  .get('[data-testid="input"]')
+            .should('be.visible')
+            .should('be.have', '[data-testid="input"]')
+        cy  .screenshot('4_3 - Login Realizado Com Sucesso');
+
+    }
+
+
+    CadastrarInstituicao() {                                                    // Cadastrar uma instituicao
+        cy  .visit(Cypress.env('Url'));
+        cy  .title()
+            .should('be.equal', 'Bureau - Idea Maker')
+        cy  .screenshot('5_1 - Pagina Login');
+        
+        cy  .get(el.campoUserName)
+            .should('be.visible')
+            .type(Cypress.env('username'))
+            .should('be.have', 'username')
+        cy  .get(el.campoPassword)
+            .should('be.visible')
+            .type(Cypress.env('password'))
+            .should('be.have', 'password')
+        cy  .get(el.botaoLogin)
+            .click()
+        cy  .screenshot('5_2 - Dados do Login Preenchidos');
+        
+        cy  .get('[data-testid="input"]')
+            .should('be.visible')
+            .should('be.have', '[data-testid="input"]')
+        cy  .screenshot('5_3 - Login Realizado Com Sucesso');
+
+    }
+
+
+    RegistrosDeFaturamento() {                                                   // Verificar registro de faturamento
+        cy  .visit(Cypress.env('Url'));
+        cy  .title()
+            .should('be.equal', 'Bureau - Idea Maker')
+        cy  .screenshot('6_1 - Pagina Login');
+        
+        cy  .get(el.campoUserName)
+            .should('be.visible')
+            .type(Cypress.env('username'))
+            .should('be.have', 'username')
+        cy  .get(el.campoPassword)
+            .should('be.visible')
+            .type(Cypress.env('password'))
+            .should('be.have', 'password')
+        cy  .get(el.botaoLogin)
+            .click()
+        cy  .screenshot('6_2 - Dados do Login Preenchidos');
+        
+        cy  .get('[data-testid="input"]')
+            .should('be.visible')
+            .should('be.have', '[data-testid="input"]')
+        cy  .screenshot('6_3 - Login Realizado Com Sucesso');
+
+    }
+
+
+    GerarRelatorios() {                                                         // Gerar relatorios
+        cy  .visit(Cypress.env('Url'));
+        cy  .title()
+            .should('be.equal', 'Bureau - Idea Maker')
+        cy  .screenshot('7_1 - Pagina Login');
+        
+        cy  .get(el.campoUserName)
+            .should('be.visible')
+            .type(Cypress.env('username'))
+            .should('be.have', 'username')
+        cy  .get(el.campoPassword)
+            .should('be.visible')
+            .type(Cypress.env('password'))
+            .should('be.have', 'password')
+        cy  .get(el.botaoLogin)
+            .click()
+        cy  .screenshot('7_2 - Dados do Login Preenchidos');
+        
+        cy  .get('[data-testid="input"]')
+            .should('be.visible')
+            .should('be.have', '[data-testid="input"]')
+        cy  .screenshot('7_3 - Login Realizado Com Sucesso');
 
     }
 

@@ -29,7 +29,7 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-3 - Enviar Imagens', () => {
+   it.only('CT-3 - Enviar Imagens', () => {
       Pages.EnviarImagens();
    })
 
@@ -50,7 +50,7 @@ describe('Testes do sistema Bureau', () => {
 
 
    it('CT-7 - Gerar Relatorios', () => {
-      Pages.Gerarrelatorios();
+      Pages.GerarRelatorios();
    })
 
 
