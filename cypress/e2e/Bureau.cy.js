@@ -24,12 +24,12 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-2 - Preencher um Contrato', () => {
+   it('CT-2 - Preencher um Contrato', () => {
       Pages.preencherContrato();
    })
 
 
-   it.only('CT-8 - Preencher dados para um Detran', () => {
+   it('CT-8 - Preencher dados para um Detran', () => {
       Pages.preencherDadosDetran();
 
    })

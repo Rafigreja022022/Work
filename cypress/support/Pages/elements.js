@@ -10,7 +10,7 @@ export const ELEMENTS = {
     
     // Contratos
     
-    campoPesquisar: '',
+    campoPesquisar: '[data-testid="input"]',
     
 
     // Registrar Contrato
