@@ -29,7 +29,7 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-3 - Enviar Imagens', () => {
+   it('CT-3 - Enviar Imagens', () => {
       Pages.EnviarImagens();
    })
 
