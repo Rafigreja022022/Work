@@ -531,14 +531,30 @@ class Pages {
             .should('be.visible')
             .type(Cypress.env('password'))
             .should('be.have', 'password')
+        cy  .screenshot('3_2 - Dados do Login Preenchidos');
+
         cy  .get(el.botaoLogin)
             .click()
-        cy  .screenshot('3_2 - Dados do Login Preenchidos');
-        
         cy  .get('[data-testid="input"]')
             .should('be.visible')
             .should('be.have', '[data-testid="input"]')
         cy  .screenshot('3_3 - Login Realizado Com Sucesso');
+
+        cy  .get('#enviar-imagens > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
+            .click()
+        cy  .screenshot('3_4 - Entrar para Enviar Imagens')
+        
+        cy  .xpath('//*[@id=":r3:"]')
+            .should('be.visible')
+            .type(Cypress.env('contrato'))
+        cy  .get('input[type="file"]')
+            .selectFile('cypress/screenshots/3_1 - Pagina Login.png')
+        cy  .screenshot('3_5 - Contrato e imagem carregados')
+
+        cy  .get('.WGDlc > .sc-cOFTSb')
+            .click()
+        cy  .screenshot('3_6 - Enviando imagens')
+
 
     }
 
