@@ -40,7 +40,7 @@ class Pages {
         cy.visit(Cypress.env('Url'));
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
-        cy.screenshot('2_1 - Pagina Login');
+        cy.screenshot('8_1 - Pagina Login');
 
         cy.get(el.campoUserName)
             .should('be.visible')
@@ -50,14 +50,14 @@ class Pages {
             .should('be.visible')
             .type(Cypress.env('password'))
             .should('be.have', 'password')
-        cy.screenshot('2_2 - Dados Login Preenchidos');
+        cy.screenshot('8_2 - Dados Login Preenchidos');
         cy.get(el.botaoLogin)
             .click()
 
         cy.get('[data-testid="input"]')
             .should('be.visible')
             .should('be.have', '[data-testid="input"]')
-        cy.screenshot('2_3 - Login Realizado Com Sucesso');
+        cy.screenshot('8_3 - Login Realizado Com Sucesso');
 
         cy.get('#cadastrar-detran > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
             .should('be.visible')
@@ -100,11 +100,11 @@ class Pages {
             .should('be.visible')
             .type(Cypress.env('EmailDetran'))
             .should('be.have', 'EmailDetran')
-        cy.screenshot('2_4 - Dados Detran Preenchidos');
+        cy.screenshot('8_4 - Dados Detran Preenchidos');
 
         cy.get(':nth-child(2) > [data-testid="button-component"]')
             .click()
-        cy.screenshot('2_5 - Dados Detran Enviado Com Sucesso')
+        cy.screenshot('8_5 - Dados Detran Enviado Com Sucesso')
 
     }
 
@@ -113,7 +113,7 @@ class Pages {
         cy.visit(Cypress.env('Url'));
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
-        cy.screenshot('8_1 - Pagina Login');
+        cy.screenshot('2_1 - Pagina Login');
 
         cy.get(el.campoUserName)
             .should('be.visible')
@@ -123,13 +123,13 @@ class Pages {
             .should('be.visible')
             .type(Cypress.env('password'))
             .should('be.have', 'password')
-        cy.screenshot('8_2 - Dados Login Preenchidos');
+        cy.screenshot('2_2 - Dados Login Preenchidos');
         cy.get(el.botaoLogin)
             .click()
 
         cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')       // Dados Contrato
             .should('be.visible')
-        cy.screenshot('8_3 - SistemaLogado')
+        cy.screenshot('2_3 - SistemaLogado')
         cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
             .click()
         cy.get(el.campoContrato)
@@ -216,7 +216,7 @@ class Pages {
             .click()
         cy.get('.lkiREi > .hIA-dKQ > .sc-ckMVTt > :nth-child(2) > .sc-cOFTSb > .sc-fXynhf')
             .click()
-        cy.screenshot('8_4 - Contrato Preenchido')
+        cy.screenshot('2_4 - Contrato Preenchido')
 
         cy.get('.sc-jGprRt > :nth-child(2)')                                          // Dados Consórcio
             .click()
@@ -228,7 +228,7 @@ class Pages {
             .focus()
             .type(Cypress.env('numerocota'))
             .should('be.have', 'numerocota')
-        cy.screenshot('8_5 - Dados Consorcio')
+        cy.screenshot('2_5 - Dados Consorcio')
 
         cy.get('.sc-jGprRt > :nth-child(3)')                                          // Dados Aditivo
             .click()
@@ -242,7 +242,7 @@ class Pages {
             .should('be.have', 'dataaditivo')
         cy.get(':nth-child(3) > .sc-cOFTSb > .sc-fXynhf')
             .click()
-        cy.screenshot('8_6 - DadosAditivo')
+        cy.screenshot('2_6 - DadosAditivo')
 
         cy.get('.sc-jGprRt > :nth-child(4)')                                      // Dados Vendedor
             .click()
@@ -250,7 +250,7 @@ class Pages {
             .focus()
             .type(Cypress.env('cnpjvendedor'))
             .should('be.have', 'cnpjvendedor')
-        cy.screenshot('8_7 - DadosVendedor')
+        cy.screenshot('2_7 - DadosVendedor')
 
         cy.get('.sc-jGprRt > :nth-child(5)')                                      // Dados Recebedor
             .click()
@@ -258,7 +258,7 @@ class Pages {
             .focus()
             .type(Cypress.env('cpfrecebedor'))
             .should('be.have', 'cpfrecebedor')
-        cy.screenshot('8_8 - Dados Recebedor')
+        cy.screenshot('2_8 - Dados Recebedor')
 
         cy.get('.sc-jGprRt > :nth-child(6)')                                      // Dados Veiculos
             .click()
@@ -307,7 +307,7 @@ class Pages {
             .focus()
             .type(Cypress.env('especie'))
             .should('be.have', 'especie')
-        cy.screenshot('8_9 - DadosVeiculos')
+        cy.screenshot('2_9 - DadosVeiculos')
 
         cy.get('.sc-jGprRt > :nth-child(7)')                                      // Dados Credor
             .click()
@@ -335,7 +335,7 @@ class Pages {
             .focus()
             .type(Cypress.env('telefonecredor'))
             .should('be.have', 'telefonecredor')
-        cy.screenshot('8_10 - Dados Credor')
+        cy.screenshot('2_10 - Dados Credor')
 
         cy.get('.sc-jGprRt > :nth-child(8)')                                      // Dados Devedor
             .click()
@@ -363,11 +363,11 @@ class Pages {
             .focus()
             .type(Cypress.env('telefonedevedor'))
             .should('be.have', 'telefonedevedor')
-        cy.screenshot('8_11 - Dados Devedor')
+        cy.screenshot('2_11 - Dados Devedor')
 
         cy.get('.sc-jGprRt > :nth-child(9)')                                      // Imagens
             .click()
-        cy.screenshot('8_12 - Dados Imagens')
+        cy.screenshot('2_12 - Dados Imagens')
 
         //cy  .get('.sc-jGprRt > :nth-child(10)')                                     // Terc. Garantidor
         //    .click()
@@ -395,11 +395,11 @@ class Pages {
         //    .focus()
         //    .type(Cypress.env('telefoneterc'))
         //    .should('be.have', 'telefoneterc')
-        //cy  .screenshot('8_13 - Dados Terc Garantidor')
+        //cy  .screenshot('2_13 - Dados Terc Garantidor')
 
         cy.get('[data-testid="button-component"]')                                    // Enviar Dados
             .click()
-        cy.screenshot('8_14 - DadosEnviadosComSucesso')
+        cy.screenshot('2_14 - DadosEnviadosComSucesso')
 
 
     }
