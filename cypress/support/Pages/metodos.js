@@ -548,7 +548,9 @@ class Pages {
             .should('be.visible')
             .type(Cypress.env('contrato'))
         cy  .get('input[type="file"]')
-            .selectFile('cypress/screenshots/3_1 - Pagina Login.png')
+        cy  .get('.jvfZKD > .sc-dsQDmV')
+            .click()
+            //.selectFile('cypress/screenshots/3_1 - Pagina Login.png')
         cy  .screenshot('3_5 - Contrato e imagem carregados')
 
         cy  .get('.WGDlc > .sc-cOFTSb')
