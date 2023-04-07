@@ -5,9 +5,9 @@ import Pages from '../support/Pages/metodos';
 describe('Testes do sistema Bureau', () => {
 
    it('CT-0 - testar xpath', () => {
-      Pages.testeXPath();   
-   })   
-   
+      Pages.testeXPath();
+   })
+
 
    it('CT-0.1 - Entrar na pagina Bureau', () => {
       Pages.acessarPagLogin();
@@ -59,5 +59,5 @@ describe('Testes do sistema Bureau', () => {
 
    })
 
-   
+
 });

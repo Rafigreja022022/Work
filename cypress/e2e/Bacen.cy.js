@@ -8,5 +8,5 @@ describe('pesquisar Bacen', () => {
       Pages.acessarbacen();
    })
 
-   
+
 });

@@ -1,20 +1,20 @@
 
 export const ELEMENTS = {
-    
+
     // Login
-    
+
     campoUserName: ':nth-child(2) > .sc-ftvSup > [data-testid="input"]',
     campoPassword: ':nth-child(3) > .sc-ftvSup > [data-testid="input"]',
     botaoLogin: '.cdfHIn > [data-testid="button-component"]',
-    
-    
+
+
     // Contratos
-    
+
     campoPesquisar: '[data-testid="input"]',
-    
+
 
     // Registrar Contrato
-    
+
     campoContrato: ':nth-child(1) > .fzVBCR > .sc-ftvSup > [data-testid="input"]',
     campoDataVigente: '.llPXw > :nth-child(1) > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
     campoEstado1: '.llPXw > :nth-child(1) > .sc-jgbSNz > [data-testid="select-text-field"] > .sc-ftvSup > [data-testid="input"]',
@@ -82,12 +82,12 @@ export const ELEMENTS = {
 
 
     // Enviar Imagens
-    
+
     campoNContrato: '',
     campoEnviar: '',
     campoProcurarImagem: '',
-    
-    
+
+
     // Cancelamento de Contrato
 
     campoNProtocolo: '',
@@ -121,21 +121,21 @@ export const ELEMENTS = {
 
 
     // Registro de Faturamento
-    
+
     campoBanco: '',
     campoData: '',
     campoDatas: '',
     campoBaixarRegistro: '',
 
-    
+
     // Gerar Relatórios
-    
+
     campoPeriodo: '',
     campoEstado: '',
     campoBuscarInstituicao: '',
     campoExportarTodos: '',
-    
-    
+
+
     // Cadastrar Departamento de transito (detran)
 
     campoEstadoDetran: '[data-testid="select-text-field"] > .sc-ftvSup > [data-testid="input"]',

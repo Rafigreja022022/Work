@@ -8,7 +8,7 @@ class Pages {
         cy.contains('#conglomerado').click()
         //.should('be.equal', 'Bureau - Idea Maker')
         cy.screenshot();
-    }  
+    }
 
 }
 
