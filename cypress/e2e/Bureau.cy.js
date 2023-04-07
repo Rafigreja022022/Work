@@ -19,17 +19,42 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-1 - Pesquisar um contrato preenchido', () => {
+   it('CT-1 - Pesquisar', () => {
       Pages.Pesquisar();
    })
 
 
-   it('CT-2 - Preencher um Contrato', () => {
+   it('CT-2 - Registrar Contrato', () => {
       Pages.preencherContrato();
    })
 
 
-   it('CT-8 - Preencher dados para um Detran', () => {
+   it('CT-3 - Enviar Imagens', () => {
+      Pages.EnviarImagens();
+   })
+
+
+   it('CT-4 - Cancelamento de Contrato', () => {
+      Pages.CancelamentoDeContrato();
+   })
+
+
+   it('CT-5 - Cadastrar Instituicao', () => {
+      Pages.CadastrarInstituicao();
+   })
+
+
+   it('CT-6 - Registros de Faturamento', () => {
+      Pages.RegistrosDeFaturamento();
+   })
+
+
+   it('CT-7 - Gerar Relatorios', () => {
+      Pages.Gerarrelatorios();
+   })
+
+
+   it('CT-8 - Cadastrar departamento de transito (Detran)', () => {
       Pages.preencherDadosDetran();
 
    })

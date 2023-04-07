@@ -2,7 +2,7 @@
 
 import Pages from '../support/Pages/metodos';
 
-describe('Realizar o preenchimento de um contrato novo', () => {
+describe('pesquisar Bacen', () => {
 
    it.only('CT-1 - Bacen', () => {
       Pages.acessarbacen();
