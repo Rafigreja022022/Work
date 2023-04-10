@@ -83,57 +83,59 @@ export const ELEMENTS = {
 
     // Enviar Imagens
 
-    campoNContrato: '',
-    campoEnviar: '',
-    campoProcurarImagem: '',
+    campoNContrato: '#\:r3\:',
+    campoEnviar: '.WGDlc > .sc-cOFTSb',
+    campoProcurarImagem: 'label > .sc-cOFTSb',
 
 
     // Cancelamento de Contrato
 
-    campoNProtocolo: '',
-    campoNContrato: '',
-    campoNRegistro: '',
-    campoNChassi: '',
+    campoNProtocolo: '#\:r15\:',
+    campoNContrato: '#\:r16\:',
+    campoNRegistro: '#\:r17\:',
+    campoNChassi: '#\:r18\:',
     campoAdcionar: '',
-    campoCarregar: '',
+    campoCarregar: ':nth-child(2) > .sc-iBkjds > [tabindex="0"]',
     campoExpotarRetorno: '',
-    campoCancelarContratos: '',
+    campoCancelarContratos: '.sc-lkwKjF > [tabindex="0"]',
 
 
     // Cadastrar Instituição
 
-    campoNomeDaInstituicao: '',
-    campoCodigoCad: '',
-    campoCNPJCad: '',
-    campoTelefoneCad: '',
-    campoCEPCad: '',
-    campoNumCad: '',
+    campoNomeDaInstituicao: '.hetXsd > :nth-child(1) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoCodigoCad: '.hetXsd > :nth-child(2) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoCNPJCad: '.hetXsd > :nth-child(3) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoTelefoneCad: '.hetXsd > :nth-child(4) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoCEPCad: '[style="display: flex; flex: 1 1 0%;"] > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoNumCad: '#form-submit > :nth-child(3) > :nth-child(2) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
 
-    campoNomeCad: '',
-    campoCPFCad: '',
-    campoFuncaoCad: '',
-    campoEmailCad: '',
-    campoTelefoneCad: '',
-    campoValidadeNoDetran: '',
+    campoNomeCad: '.iUmgZv > :nth-child(2) > :nth-child(1) > .sc-ftvSup > [data-testid="input"]',
+    campoCPFCad: ':nth-child(2) > .sc-ftvSup > [data-testid="input"]',
+    campoFuncaoCad: ':nth-child(3) > .sc-ftvSup > [data-testid="input"]',
+    campoEmailCad: '.iUmgZv > :nth-child(3) > :nth-child(1) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoTelefoneCad: '.iUmgZv > :nth-child(3) > :nth-child(2) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoValidadeNoDetran: '.fCDWsI > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
 
-    campoLimparCad: '',
-    campoCadastrarCad: '',
+    campoLimparCad: '.MuiButton-text',
+    campoCadastrarCad: '.MuiButton-contained',
 
 
     // Registro de Faturamento
 
-    campoBanco: '',
-    campoData: '',
-    campoDatas: '',
-    campoBaixarRegistro: '',
+    campoBanco: '[data-testid="select-text-field"] > .sc-ftvSup > [data-testid="input"]',
+    campoData: ':nth-child(2) > .sc-ftvSup > [data-testid="input"]',
+    campoDatas: ':nth-child(3) > .sc-ftvSup > [data-testid="input"]',
+    campoBaixarRegistro: '[data-testid="button-component"]',
 
 
     // Gerar Relatórios
 
-    campoPeriodo: '',
-    campoEstado: '',
-    campoBuscarInstituicao: '',
-    campoExportarTodos: '',
+    campoPeriodo: '.kahAao > .sc-jgbSNz > [data-testid="select-text-field"] > .sc-ftvSup > [data-testid="input"]',
+    campoEstado: '.jQCddH > .sc-jgbSNz > [data-testid="select-text-field"] > .sc-ftvSup > [data-testid="input"]',
+    campoBuscarInstituicao: '.dqkugf > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoExportarTodos: '[data-testid="button-component"]',
+    campoDownload1: ':nth-child(1) > .sc-iqGgem > .hkoHTv > .dQXKcM > .sc-cOFTSb > #enable-exportation',
+    campoDownload2: ':nth-child(2) > .sc-iqGgem > .hkoHTv > .dQXKcM > .sc-cOFTSb > #enable-exportation',
 
 
     // Cadastrar Departamento de transito (detran)
