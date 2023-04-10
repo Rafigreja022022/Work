@@ -582,6 +582,44 @@ class Pages {
             .should('be.have', '[data-testid="input"]')
         cy  .screenshot('4_3 - Login Realizado Com Sucesso');
 
+        cy  .get('#cancelar-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
+            .click()
+        cy  .screenshot('4_4 - Preencher Cancelamento de contrato')
+
+        cy  .xpath(el.campoNProtocolo)
+            .click()
+            .type(Cypress.env('contrato'))
+        cy  .xpath(el.campoNContrato)
+            .click()
+        cy  .get('[type="submit"]')
+            .click()
+        cy  .screenshot('4_5 - Numero de protocolo adicionado')    
+            
+        cy  .xpath(el.campoNContrato)
+            .click()
+            .type(Cypress.env('contrato'))
+        cy  .xpath(el.campoNRegistro)
+            .click()
+            .type(Cypress.env('numrestricao'))
+        cy  .xpath(el.campoNChassi)
+            .click()
+            .type(Cypress.env('chassi'))
+        cy  .get('.jWyEmo > .sc-iBkjds > .sc-bZnhIo')
+            .click()    
+        cy  .get('[type="submit"]')
+            .click()
+        cy  .get(':nth-child(2) > .sc-iBkjds > [type="button"]')
+            .click()
+        cy  .screenshot('4_6 - Adicionado pelo numero de contrato, restricao e chassi')
+
+        cy  .get('.sc-lkwKjF > [tabindex="0"]')
+            .click()
+        cy  .get('#notistack-snackbar')
+            .should('be.visible')
+        cy  .screenshot('4_7 - Cancelado os contratos')
+
+
+
     }
 
 

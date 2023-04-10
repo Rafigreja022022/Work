@@ -90,10 +90,10 @@ export const ELEMENTS = {
 
     // Cancelamento de Contrato
 
-    campoNProtocolo: '#\:r15\:',
-    campoNContrato: '#\:r16\:',
-    campoNRegistro: '#\:r17\:',
-    campoNChassi: '#\:r18\:',
+    campoNProtocolo: '//*[@id=":r3:"]',
+    campoNContrato: '//*[@id=":r4:"]',
+    campoNRegistro: '//*[@id=":r5:"]',
+    campoNChassi: '//*[@id=":r6:"]',
     campoAdcionar: '',
     campoCarregar: ':nth-child(2) > .sc-iBkjds > [tabindex="0"]',
     campoExpotarRetorno: '',

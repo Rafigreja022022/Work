@@ -34,12 +34,12 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-4 - Cancelamento de Contrato', () => {
+   it.only('CT-4 - Cancelamento de Contrato', () => {
       Pages.CancelamentoDeContrato();
    })
 
 
-   it.only('CT-5 - Cadastrar Instituicao', () => {
+   it('CT-5 - Cadastrar Instituicao', () => {
       Pages.CadastrarInstituicao();
    })
 
