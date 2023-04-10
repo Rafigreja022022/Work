@@ -660,8 +660,42 @@ class Pages {
             .should('be.have', '[data-testid="input"]')
         cy  .screenshot('7_3 - Login Realizado Com Sucesso');
 
+        cy  .get('#relatorios-bancos > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
+            .should('be.visible')
+            .click()
+        cy  .screenshot('7_4 - Clicado em Gerar Relatorios')    
+
+        cy  .get(el.campoPeriodo)
+            .focus()
+            .type(Cypress.env('PeriodoGR'))
+        cy  .xpath('//*[@id=":r3:-option-0"]')
+            .click()
+        cy  .get(el.campoEstado)
+            .focus()
+            .type(Cypress.env('EstadoGR'))
+        cy.xpath('//*[@id=":r5:-option-0"]')
+            .click()
+        cy  .screenshot('7_5 - Dados preenchidos para Gerar relatorio')
+
+        cy  .get(el.campoExportarTodos)
+            .should('be.visible')
+            .click()
+        cy  .screenshot('7_6 - Download do Exportar com o Gerar relatorio')
+
+        cy  .get(el.campoDownload1)
+            .should('be.visible')
+            .click()
+        cy  .screenshot('7_7 - Download 1 do Exportar com o Gerar relatorio')
+
+        cy  .get(el.campoDownload2)
+            .should('be.visible')
+            .click()
+        cy  .screenshot('7_8 - Download 2 do Exportar com o Gerar relatorio')
+
     }
 
+
+    
 }
 
 export default new Pages();
