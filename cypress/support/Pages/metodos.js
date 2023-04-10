@@ -600,13 +600,77 @@ class Pages {
             .type(Cypress.env('password'))
             .should('be.have', 'password')
         cy  .screenshot('5_2 - Dados do Login Preenchidos');
-
+        
         cy  .get(el.botaoLogin)
             .click()
+        cy  .screenshot('5_3 - Login Realizado Com Sucesso');
+        
         cy  .get('[data-testid="input"]')
             .should('be.visible')
             .should('be.have', '[data-testid="input"]')
-        cy  .screenshot('5_3 - Login Realizado Com Sucesso');
+        cy  .get('#cadastrar-instituicao > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
+            .should('be.visible')
+            .click()
+        cy  .screenshot('5_4 - Cadastrar Instituicao')
+
+        cy  .get(el.campoNomeDaInstituicao)
+            .focus()
+            .type(Cypress.env('NomeDaInstituicaoCad'))
+            .should('be.have', 'NomedaInstituicaocad')
+        cy  .get(el.campoCodigoCad)
+            .focus()
+            .type(Cypress.env('CodigoCad'))
+            .should('be.have', 'CodigoCad')
+        cy  .get(el.campoCNPJCad)
+            .focus()
+            .type(Cypress.env('CNPJCad'))
+            .should('be.have', 'CNPJCad')
+        cy  .get(el.campoTelefoneCad)
+            .focus()
+            .type(Cypress.env('TelefoneCad'))
+            .should('be.have', 'TelefoneCad')
+        cy  .get(el.campoCEPCad)
+            .focus()
+            .type(Cypress.env('CEPCad'))
+            .should('be.have', 'CEPCad')
+        cy  .get(el.campoNumCad)
+            .focus()
+            .type(Cypress.env('NumCad'))
+            .should('be.have', 'NumCad')
+        cy  .get(el.campoNomeCad)
+            .focus()
+            .type(Cypress.env('NomeCad'))
+            .should('be.have', 'NomeCad')
+        cy  .get(el.campoCPFCad)
+            .focus()
+            .type(Cypress.env('CPFCad'))
+            .should('be.have', 'CPFCad')
+        cy  .get(el.campoFuncaoCad)
+            .focus()
+            .type(Cypress.env('FuncaoCad'))
+            .should('be.have', 'FuncaoCad')
+        cy  .get(el.campoEmailCad)
+            .focus()
+            .type(Cypress.env('EmailCad'))
+            .should('be.have', 'EmailCad')
+        cy  .get(el.campoTelefoneNomeCad)
+            .focus()
+            .type(Cypress.env('TelefoneNomeCad'))
+            .should('be.have', 'TelefoneNomeCad')
+        cy  .get(el.campoValidadeNoDetran)
+            .focus()
+            .type(Cypress.env('ValidadeNoDetran'))
+            .should('be.have', 'ValidadeNoDetran')
+        cy  .screenshot('5_5 - Dados preenchidos para Cadastrar Intituicao')
+
+        cy  .get(el.campoCadastrarCad)
+            .click()
+        cy  .screenshot('5_6 - Cadastrado Instituicao')
+
+
+
+
+        
 
     }
 
@@ -722,7 +786,6 @@ class Pages {
         cy  .screenshot('7_8 - Download 2 do Exportar com o Gerar relatorio')
 
     }
-
 
     
 }

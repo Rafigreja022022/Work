@@ -39,12 +39,12 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-5 - Cadastrar Instituicao', () => {
+   it.only('CT-5 - Cadastrar Instituicao', () => {
       Pages.CadastrarInstituicao();
    })
 
 
-   it.only('CT-6 - Registros de Faturamento', () => {
+   it('CT-6 - Registros de Faturamento', () => {
       Pages.RegistrosDeFaturamento();
    })
 

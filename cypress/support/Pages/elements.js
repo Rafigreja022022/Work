@@ -113,7 +113,7 @@ export const ELEMENTS = {
     campoCPFCad: ':nth-child(2) > .sc-ftvSup > [data-testid="input"]',
     campoFuncaoCad: ':nth-child(3) > .sc-ftvSup > [data-testid="input"]',
     campoEmailCad: '.iUmgZv > :nth-child(3) > :nth-child(1) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
-    campoTelefoneCad: '.iUmgZv > :nth-child(3) > :nth-child(2) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoTelefoneNomeCad: '.iUmgZv > :nth-child(3) > :nth-child(2) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
     campoValidadeNoDetran: '.fCDWsI > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
 
     campoLimparCad: '.MuiButton-text',
