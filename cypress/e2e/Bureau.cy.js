@@ -44,12 +44,12 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-6 - Registros de Faturamento', () => {
+   it.only('CT-6 - Registros de Faturamento', () => {
       Pages.RegistrosDeFaturamento();
    })
 
 
-   it.only('CT-7 - Gerar Relatorios', () => {
+   it('CT-7 - Gerar Relatorios', () => {
       Pages.GerarRelatorios();
    })
 

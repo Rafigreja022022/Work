@@ -634,6 +634,35 @@ class Pages {
             .should('be.have', '[data-testid="input"]')
         cy  .screenshot('6_3 - Login Realizado Com Sucesso');
 
+        cy  .get('#registros-faturamento > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
+            .should('be.visible')
+            .click()
+        cy  .screenshot('6_4 - Registros de Faturamento')
+        
+        cy  .get(el.campoBanco)
+            .should('be.visible')
+            .focus()
+            .type(Cypress.env('Banco'))
+        cy  .xpath('//*[@id=":r3:-option-0"]')
+            .click()
+        cy  .get(el.campoData)
+            .should('be.visible')
+            .click()
+            .type(Cypress.env('Data'))
+            .should('be.have', 'Data')
+        cy  .get(el.campoDatas)
+            .should('be.visible')
+            .focus()
+            .type(Cypress.env('Datas'))
+            .should('be.have', 'Datas')
+        cy  .screenshot('6_5 - Dados Preenchidos do Rgistro de Faturamento')
+
+        cy  .get(el.campoBaixarRegistro)
+            .should('be.visible')
+            .click()
+        cy  .screenshot('6_6 - Registro Baixado')    
+
+
     }
 
 
