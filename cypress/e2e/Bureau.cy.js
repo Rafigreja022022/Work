@@ -19,17 +19,17 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-1 - Pesquisar', () => {
+   it('CT-1 - Pesquisar', () => {
       Pages.Pesquisar();
    })
 
 
-   it.only('CT-2 - Registrar Contrato', () => {
+   it('CT-2 - Registrar Contrato', () => {
       Pages.preencherContrato();
    })
 
 
-   it.only('CT-3 - Enviar Imagens', () => {
+   it('CT-3 - Enviar Imagens', () => {
       Pages.EnviarImagens();
    })
 
@@ -39,22 +39,22 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-5 - Cadastrar Instituicao', () => {
+   it('CT-5 - Cadastrar Instituicao', () => {
       Pages.CadastrarInstituicao();
    })
 
 
-   it.only('CT-6 - Registros de Faturamento', () => {
+   it('CT-6 - Registros de Faturamento', () => {
       Pages.RegistrosDeFaturamento();
    })
 
 
-   it.only('CT-7 - Gerar Relatorios', () => {
+   it('CT-7 - Gerar Relatorios', () => {
       Pages.GerarRelatorios();
    })
 
 
-   it.only('CT-8 - Cadastrar departamento de transito (Detran)', () => {
+   it('CT-8 - Cadastrar departamento de transito (Detran)', () => {
       Pages.preencherDadosDetran();
 
    })
