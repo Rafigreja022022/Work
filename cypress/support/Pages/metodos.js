@@ -397,9 +397,9 @@ class Pages {
             .should('be.have', 'telefoneterc')
         cy  .screenshot('2_13 - Dados Terc Garantidor')
 
-        cy.get('[data-testid="button-component"]')                                    // Enviar Dados
+        cy  .xpath('//*[@type="submit"]')                                    // Enviar Dados
             .click()
-        cy.screenshot('2_14 - DadosEnviadosComSucesso')
+        cy  .screenshot('2_14 - DadosEnviadosComSucesso')
 
 
     }
