@@ -24,37 +24,37 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-2 - Registrar Contrato', () => {
+   it.only('CT-2 - Registrar Contrato', () => {
       Pages.preencherContrato();
    })
 
 
-   it('CT-3 - Enviar Imagens', () => {
+   it.only('CT-3 - Enviar Imagens', () => {
       Pages.EnviarImagens();
    })
 
 
-   it('CT-4 - Cancelamento de Contrato', () => {
+   it.only('CT-4 - Cancelamento de Contrato', () => {
       Pages.CancelamentoDeContrato();
    })
 
 
-   it('CT-5 - Cadastrar Instituicao', () => {
+   it.only('CT-5 - Cadastrar Instituicao', () => {
       Pages.CadastrarInstituicao();
    })
 
 
-   it('CT-6 - Registros de Faturamento', () => {
+   it.only('CT-6 - Registros de Faturamento', () => {
       Pages.RegistrosDeFaturamento();
    })
 
 
-   it('CT-7 - Gerar Relatorios', () => {
+   it.only('CT-7 - Gerar Relatorios', () => {
       Pages.GerarRelatorios();
    })
 
 
-   it('CT-8 - Cadastrar departamento de transito (Detran)', () => {
+   it.only('CT-8 - Cadastrar departamento de transito (Detran)', () => {
       Pages.preencherDadosDetran();
 
    })
