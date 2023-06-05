@@ -2,11 +2,15 @@
 
 import Pages from '../support/Pages/metodos';
 
-describe('pesquisar Bacen', () => {
+// cypress/integration/exemplo.spec.js
 
-   it.only('CT-1 - Bacen', () => {
-      Pages.acessarbacen();
-   })
+describe('Cenario de testes funcionais', () => {
+    it('Realizar login', () => {
+        cy.request({
+            method: 'DELETE',
+            url: 'https://sandbox-bureauregistryapi.ideamaker.com.br/api/contratos/12345678911111111119',
 
-
-});
+        }
+        )
+    })
+})
