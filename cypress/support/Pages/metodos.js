@@ -277,7 +277,7 @@ class Pages {
         cy.get(el.campoufplaca)
             .focus()
             .type(Cypress.env('ufplaca'))
-        cy.xpath('//*[@id=":r1e:-option-0"]')
+        cy.xpath('//*[@id=":r1c:-option-0"]')
             .click()
         cy.get(el.camporenavam)
             .focus()
