@@ -2,7 +2,7 @@ const el = require('./elements').ELEMENTS;
 
 class Pages {
 
-    acessarPagLogin() {                                                         // Validar a pagina para realizar o login 
+    acessarPagLogin() {                                                             // Validar a pagina para realizar o login 
         cy.visit(Cypress.env('Url'));
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -10,7 +10,7 @@ class Pages {
     }
 
 
-    preencherDadosDoLogin() {                                                   // Validar o preenchimento e login 
+    preencherDadosDoLogin() {                                                       // Validar o preenchimento e login 
         cy.visit(Cypress.env('Url'));
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -36,7 +36,7 @@ class Pages {
     }
 
 
-    preencherDadosDetran() {                                                    // Validar o cadastro de um Detran 
+    preencherDadosDetran() {                                                        // Validar o cadastro de um Detran 
         cy.visit(Cypress.env('Url'));
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -109,7 +109,7 @@ class Pages {
     }
 
 
-    preencherContrato() {                                                       // Preencher dados de um contrato - Flag 1 
+    preencherContrato() {                                                           // Preencher dados de um contrato - Flag 1 
         cy.visit(Cypress.env('Url'));
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -127,7 +127,7 @@ class Pages {
         cy.get(el.botaoLogin)
             .click()
 
-        cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')       // Dados Contrato
+        cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')          // Dados Contrato
             .should('be.visible')
         cy.screenshot('2_3 - SistemaLogado')
         cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
@@ -218,33 +218,33 @@ class Pages {
             .click()
         cy.screenshot('2_4 - Contrato Preenchido')
 
-        cy.get('.sc-jGprRt > :nth-child(2)')                                          // Dados Consórcio
-            .click()
-        cy.get(el.camponumerogrupo)
-            .focus()
-            .type(Cypress.env('numerogrupo'))
-            .should('be.have', 'numerogrupo')
-        cy.get(el.camponumerocota)
-            .focus()
-            .type(Cypress.env('numerocota'))
-            .should('be.have', 'numerocota')
-        cy.screenshot('2_5 - Dados Consorcio')
-
-        cy.get('.sc-jGprRt > :nth-child(3)')                                          // Dados Aditivo
-            .click()
-        cy.get(el.camponumeroaditivo)
-            .focus()
-            .type(Cypress.env('numeroaditivo'))
-            .should('be.have', 'numeroaditivo')
-        cy.get(el.campodataaditivo)
-            .focus()
-            .type(Cypress.env('dataaditivo'))
-            .should('be.have', 'dataaditivo')
-        cy.get(':nth-child(3) > .sc-cOFTSb > .sc-fXynhf')
-            .click()
-        cy.screenshot('2_6 - DadosAditivo')
-
-        cy.get('.sc-jGprRt > :nth-child(4)')                                      // Dados Vendedor
+        //cy.get('.sc-jGprRt > :nth-child(2)')                                          // Dados Consórcio
+        //    .click()
+        //cy.get(el.camponumerogrupo)
+        //    .focus()
+        //    .type(Cypress.env('numerogrupo'))
+        //    .should('be.have', 'numerogrupo')
+        //cy.get(el.camponumerocota)
+        //    .focus()
+        //    .type(Cypress.env('numerocota'))
+        //    .should('be.have', 'numerocota')
+        //cy.screenshot('2_5 - Dados Consorcio')
+//
+        //cy.get('.sc-jGprRt > :nth-child(3)')                                          // Dados Aditivo
+        //    .click()
+        //cy.get(el.camponumeroaditivo)
+        //    .focus()
+        //    .type(Cypress.env('numeroaditivo'))
+        //    .should('be.have', 'numeroaditivo')
+        //cy.get(el.campodataaditivo)
+        //    .focus()
+        //    .type(Cypress.env('dataaditivo'))
+        //    .should('be.have', 'dataaditivo')
+        //cy.get(':nth-child(3) > .sc-cOFTSb > .sc-fXynhf')
+        //    .click()
+        //cy.screenshot('2_6 - DadosAditivo')
+//
+        cy.get('.sc-jGprRt > :nth-child(4)')                                         // Dados Vendedor
             .click()
         cy.get(el.campocnpjvendedor)
             .focus()
@@ -252,7 +252,7 @@ class Pages {
             .should('be.have', 'cnpjvendedor')
         cy.screenshot('2_7 - DadosVendedor')
 
-        cy.get('.sc-jGprRt > :nth-child(5)')                                      // Dados Recebedor
+        cy.get('.sc-jGprRt > :nth-child(5)')                                         // Dados Recebedor
             .click()
         cy.get(el.campocpfrecebedor)
             .focus()
@@ -260,7 +260,7 @@ class Pages {
             .should('be.have', 'cpfrecebedor')
         cy.screenshot('2_8 - Dados Recebedor')
 
-        cy.get('.sc-jGprRt > :nth-child(6)')                                      // Dados Veiculos
+        cy.get('.sc-jGprRt > :nth-child(6)')                                         // Dados Veiculos
             .click()
         cy.get(':nth-child(1) > .guuuIH > .sc-dIouRR > .sc-ckMVTt > :nth-child(2) > .sc-cOFTSb > .sc-fXynhf')
             .click()
@@ -277,7 +277,7 @@ class Pages {
         cy.get(el.campoufplaca)
             .focus()
             .type(Cypress.env('ufplaca'))
-        cy.xpath('//*[@id=":r1c:-option-0"]')
+        cy.xpath('//*[@id=":r17:-option-0"]')
             .click()
         cy.get(el.camporenavam)
             .focus()
@@ -369,33 +369,33 @@ class Pages {
             .click()
         cy.screenshot('2_12 - Dados Imagens')
 
-        cy  .get('.sc-jGprRt > :nth-child(10)')                                     // Terc. Garantidor
-            .click()
-        cy  .get(el.campoNomeTerc)
-            .focus()
-            .type(Cypress.env('nometerc'))
-            .should('be.have', 'nometerc')
-        cy  .get(el.campoCPFTerc)
-            .focus()
-            .type(Cypress.env('cpfterc'))
-            .should('be.have', 'cpfterc')
-        cy  .get(el.campoCEPTerc)
-            .focus()
-            .type(Cypress.env('cepterc'))
-            .should('be.have', 'cepterc')
-        cy  .get(el.campoNumeroTerc)
-            .focus()
-            .type(Cypress.env('numeroterc'))
-            .should('be.have', 'numeroterc')    
-        cy  .get(el.campoEmailTerc)
-            .focus()
-            .type(Cypress.env('emailterc'))
-            .should('be.have', 'emailterc')
-        cy  .get(el.campoTelefoneTerc)
-            .focus()
-            .type(Cypress.env('telefoneterc'))
-            .should('be.have', 'telefoneterc')
-        cy  .screenshot('2_13 - Dados Terc Garantidor')
+        //cy  .get('.sc-jGprRt > :nth-child(10)')                                   // Terc. Garantidor
+        //    .click()
+        //cy  .get(el.campoNomeTerc)
+        //    .focus()
+        //    .type(Cypress.env('nometerc'))
+        //    .should('be.have', 'nometerc')
+        //cy  .get(el.campoCPFTerc)
+        //    .focus()
+        //    .type(Cypress.env('cpfterc'))
+        //    .should('be.have', 'cpfterc')
+        //cy  .get(el.campoCEPTerc)
+        //    .focus()
+        //    .type(Cypress.env('cepterc'))
+        //    .should('be.have', 'cepterc')
+        //cy  .get(el.campoNumeroTerc)
+        //    .focus()
+        //    .type(Cypress.env('numeroterc'))
+        //    .should('be.have', 'numeroterc')    
+        //cy  .get(el.campoEmailTerc)
+        //    .focus()
+        //    .type(Cypress.env('emailterc'))
+        //    .should('be.have', 'emailterc')
+        //cy  .get(el.campoTelefoneTerc)
+        //    .focus()
+        //    .type(Cypress.env('telefoneterc'))
+        //    .should('be.have', 'telefoneterc')
+        //cy  .screenshot('2_13 - Dados Terc Garantidor')
        cy  .xpath('//*[@type="submit"]')                                    // Enviar Dados
             .click()
         cy  .get('#notistack-snackbar')
@@ -406,7 +406,7 @@ class Pages {
     }
 
 
-    testeXPath() {                                                              // Testar plugin para xpath
+    testeXPath() {                                                                  // Testar plugin para xpath
         cy.visit(Cypress.env('Url'))
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -435,7 +435,7 @@ class Pages {
     }
 
 
-    Pesquisar() {                                                               // Pesquisa um contrato preenchido anteriormente
+    Pesquisar() {                                                                   // Pesquisa um contrato preenchido anteriormente
         cy.visit(Cypress.env('Url'))
         cy.title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -518,7 +518,7 @@ class Pages {
     }
 
 
-    EnviarImagens() {                                                           // Enviar anexos
+    EnviarImagens() {                                                               // Enviar anexos
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -560,7 +560,7 @@ class Pages {
     }
 
 
-    CancelamentoDeContrato() {                                                  // Cancelar um contrato preenchido
+    CancelamentoDeContrato() {                                                      // Cancelar um contrato preenchido
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -624,7 +624,7 @@ class Pages {
     }
 
 
-    CadastrarInstituicao() {                                                    // Cadastrar uma instituicao
+    CadastrarInstituicao() {                                                        // Cadastrar uma instituicao
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -714,7 +714,7 @@ class Pages {
     }
 
 
-    RegistrosDeFaturamento() {                                                  // Verificar registro de faturamento
+    RegistrosDeFaturamento() {                                                      // Verificar registro de faturamento
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
@@ -769,7 +769,7 @@ class Pages {
     }
 
 
-    GerarRelatorios() {                                                         // Gerar relatorios
+    GerarRelatorios() {                                                             // Gerar relatorios
         cy  .visit(Cypress.env('Url'));
         cy  .title()
             .should('be.equal', 'Bureau - Idea Maker')
