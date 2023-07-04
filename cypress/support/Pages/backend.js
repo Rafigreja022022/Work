@@ -20,7 +20,7 @@ describe('Cenario de testes funcionais', () => {
         cy.screenshot();
     })
 
-    it.only('Verificar o status 200', () => {
+    it('Verificar o status 200', () => {
         cy.request({
             method: 'POST',
             url: 'https://api-homol.apcap.com.br/auth',
@@ -43,4 +43,69 @@ describe('Cenario de testes funcionais', () => {
             //expect(response.body.saldo).to.be.equal('');
         })
     })
-})
+
+    it.only('Pesquisar dados de um usuario', () => {
+        cy.request({
+            method: 'GET',
+            url: 'https://api-homol.apcap.com.br/servicos/consulta/usuario/31788925831',
+            headers: {
+                CustomerId : '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                CustomerKey : 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+
+            },
+        }).then((response) => {
+            expect(response.status).to.be.equal(200);
+            
+            //response.body.compras.map(compra => {
+            //    cy.log(JSON.stringify(compra.produto))
+            //})
+
+            //for (const compra of response.body.compras) {
+            //    cy.log(JSON.stringify(compra.produto))
+            //}
+            cy.log(JSON.stringify(response.body, null,'\t'));
+        })
+        cy.screenshot();
+    })
+
+    it.only('Pesquisar CPF de um usuario', () => {
+        cy.request({
+            method: 'GET',
+            url: 'https://api-homol.apcap.com.br/servicos/consulta/cpf/31788925831',
+            headers: {
+                CustomerId : '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                CustomerKey : 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+            },
+        }).then((response) => {
+            expect(response.status).to.be.equal(200);
+            cy.log(JSON.stringify(response.body, null,'\t'));
+        })
+        cy.screenshot();
+    })
+
+    it.only('Logar com CPF de um usuario', () => {
+        cy.request({
+            method: 'POST',
+            url: 'https://api-homol.apcap.com.br/auth',
+            headers: {
+                Appid: 'a30cbee34fdf8a75f1166aa15f19a116',
+                AppVersion: '6.5.0',
+                Imei: '353582750487860',
+                ContentType: 'application/json',
+                device: 'Postman',
+                AccessToken: 'NDQ2Yjk2ZDA5MjcwNTUzZWM3ZGRkMDQxMTdmNTNhMmU6TURBek1EQXdNRGt6Tmc9PQ==',
+                CustomerId : '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                CustomerKey : 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+            },
+            body: {
+                cpf: '30327047828',
+                senha: '008bd5ad93b754d500338c253d9c1770'
+            }
+        }).then((response) => {
+            expect(response.status).to.be.equal(200);
+            cy.log(JSON.stringify(response.body, null,'\t'));
+        })
+        cy.screenshot();
+    })
+
+})    
