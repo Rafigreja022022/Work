@@ -20,11 +20,6 @@
     "cypress": "^12.8.1"
   },
   "dependencies": {
-    "allure": "^0.0.0",
-    "cypress-xpath": "^2.0.1",
-    "git": "^2.15.0",
-    "node": "^18.15.0",
-    "npm": "^9.5.0",
-    "yarn": "^1.22.19"
+    "cypress-xpath": "^2.0.1"
   }
 }

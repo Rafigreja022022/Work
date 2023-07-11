@@ -1,6 +1,6 @@
 import { describe } from "mocha";
 
-describe('Cenario de testes funcionais', () => {
+describe('BackEnd APIV3', () => {
     it('Realizar login', () => {
         cy.request({
             url: 'https://apiv3.sp.apcap.com.br/auth',
@@ -44,18 +44,18 @@ describe('Cenario de testes funcionais', () => {
         })
     })
 
-    it.only('Pesquisar dados de um usuario', () => {
+    it('Pesquisar dados de um usuario', () => {
         cy.request({
             method: 'GET',
             url: 'https://api-homol.apcap.com.br/servicos/consulta/usuario/31788925831',
             headers: {
-                CustomerId : '488171a5-d17b-432b-a4b9-f79cb4912bce',
-                CustomerKey : 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+                CustomerId: '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                CustomerKey: 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
 
             },
         }).then((response) => {
             expect(response.status).to.be.equal(200);
-            
+
             //response.body.compras.map(compra => {
             //    cy.log(JSON.stringify(compra.produto))
             //})
@@ -63,24 +63,24 @@ describe('Cenario de testes funcionais', () => {
             //for (const compra of response.body.compras) {
             //    cy.log(JSON.stringify(compra.produto))
             //}
-            cy.log(JSON.stringify(response.body, null,'\t'));
+            cy.log(JSON.stringify(response.body, null, '\t'));
         })
-        cy.screenshot();
+        cy.screenshot('Pesquisar dados de um usuario');
     })
 
-    it.only('Pesquisar CPF de um usuario', () => {
+    it('Pesquisar CPF de um usuario', () => {
         cy.request({
             method: 'GET',
             url: 'https://api-homol.apcap.com.br/servicos/consulta/cpf/31788925831',
             headers: {
-                CustomerId : '488171a5-d17b-432b-a4b9-f79cb4912bce',
-                CustomerKey : 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+                CustomerId: '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                CustomerKey: 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
             },
         }).then((response) => {
             expect(response.status).to.be.equal(200);
-            cy.log(JSON.stringify(response.body, null,'\t'));
+            cy.log(JSON.stringify(response.body, null, '\t'));
         })
-        cy.screenshot();
+        cy.screenshot('Pesquisar CPF de um usuario');
     })
 
     it.only('Logar com CPF de um usuario', () => {
@@ -94,8 +94,8 @@ describe('Cenario de testes funcionais', () => {
                 ContentType: 'application/json',
                 device: 'Postman',
                 AccessToken: 'NDQ2Yjk2ZDA5MjcwNTUzZWM3ZGRkMDQxMTdmNTNhMmU6TURBek1EQXdNRGt6Tmc9PQ==',
-                CustomerId : '488171a5-d17b-432b-a4b9-f79cb4912bce',
-                CustomerKey : 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+                CustomerId: '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                CustomerKey: 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
             },
             body: {
                 cpf: '30327047828',
@@ -103,9 +103,15 @@ describe('Cenario de testes funcionais', () => {
             }
         }).then((response) => {
             expect(response.status).to.be.equal(200);
-            cy.log(JSON.stringify(response.body, null,'\t'));
+            cy.log(JSON.stringify(response.body, null, '\t'));
         })
-        cy.screenshot();
+        cy.screenshot('Logar Com CPF De Um Usuario');
     })
+
+    it.only(''), () => {
+
+
+        
+    }
 
 })    
