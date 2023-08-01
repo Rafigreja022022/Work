@@ -108,7 +108,7 @@ describe('BackEnd APIV3', () => {
         cy.screenshot('Logar Com CPF De Um Usuario');
     })
 
-    it.only(''), () => {
+    it(''), () => {
 
 
         

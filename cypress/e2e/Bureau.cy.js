@@ -59,5 +59,23 @@ describe('Testes do sistema Bureau', () => {
 
    })
 
+   
+   it('CT-9 - Cadastrar Agentes - Supervisor', () => {
+      Pages.cadastrarAgentesSupervisor();
+
+   })
+
+
+   it('CT-9_1 - Cadastrar Agentes - Operador', () => {
+      Pages.cadastrarAgentesOperador();
+
+   })
+
+
+   it('CT-9_2 - Consultar Agentes', () => {
+      Pages.consultarAgentes();
+
+   })
+
 
 });
