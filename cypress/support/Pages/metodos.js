@@ -578,6 +578,10 @@ class Pages {
             .click()
         cy  .screenshot('3_6 - Enviando imagens')
 
+        cy.get('.jvfZKD > .sc-dsQDmV')
+            .should('be.visible')
+        cy.screenshot('3_7 - Imagens enviadas com sucesso')
+
 
     }
 

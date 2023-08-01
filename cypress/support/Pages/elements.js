@@ -152,28 +152,28 @@ export const ELEMENTS = {
 
     // Cadastrar Agentes
 
-    botaoCadastrarAgente: '',
+    botaoCadastrarAgente: '.hcWfBV > :nth-child(2) > [data-testid="button-component"]',
 
-    campoPesquisarAgentes: '',
-    campoPesquisarLupa: '',
+    campoPesquisarAgentes: '.fWQmPo > :nth-child(2) > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoPesquisarLupa: '.sc-ftvSup > .sc-cOFTSb > .sc-dsQDmV',
 
     //Dados do agente
 
-    campoNomeCompletoAgentes: '',
-    campoEmailAgentes: '',
-    campoCPFAgentes: '',
-    campoTelefoneAgentes: '',
+    campoNomeCompletoAgentes: ':nth-child(2) > .gurgBP > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoEmailAgentes: ':nth-child(2) > .fjtwOd > .sc-dIouRR > .sc-ftvSup > [data-testid="input"]',
+    campoCPFAgentes: '.bloPPG > :nth-child(1) > .sc-ftvSup > [data-testid="input"]',
+    campoTelefoneAgentes: '.bloPPG > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
 
 
     //Dados Mediante a instituiçao 
 
-    campoInstituiçaoBancariaAgentes: '',
-    campoSupervisorAgentes: '',
-    campoOperadorAgentes: '',
+    campoInstituiçaoBancariaAgentes: ':nth-child(4) > .gurgBP > :nth-child(1) > .sc-ftvSup > [data-testid="input"]',
+    campoSupervisorAgentes: '.sc-ckMVTt > :nth-child(1)',
+    campoOperadorAgentes: '.sc-ckMVTt > :nth-child(2)',
     
-    botaoAlterarSenha: '',
-    botaoLimparAgentes: '',
-    botaoSalvarAgentes: '',
+    botaoAlterarSenha: '.bloPPG > .sc-iBkjds',
+    botaoLimparAgentes: '.fSZFje > :nth-child(1)',
+    botaoSalvarAgentes: '.fSZFje > :nth-child(2)',
 
 
 } 
