@@ -17,7 +17,7 @@
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
     "@shelex/cypress-allure-plugin": "^2.34.0",
-    "cypress": "^12.8.1",
+    "cypress": "^12.17.3",
     "cypress-file-upload": "^5.0.8"
   },
   "dependencies": {
