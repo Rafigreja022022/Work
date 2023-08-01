@@ -19,17 +19,17 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-1 - Pesquisar', () => {
+   it.only('CT-1 - Pesquisar', () => {
       Pages.Pesquisar();
    })
 
 
-   it('CT-2 - Registrar Contrato', () => {
+   it.only('CT-2 - Registrar Contrato', () => {
       Pages.preencherContrato();
    })
 
 
-   it.only('CT-3 - Enviar Imagens', () => {
+   it('CT-3 - Enviar Imagens', () => {
       Pages.EnviarImagens();
    })
 
