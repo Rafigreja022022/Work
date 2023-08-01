@@ -150,4 +150,30 @@ export const ELEMENTS = {
     campoTelefoneDetran: '.ebtNNd > .gurgBP > :nth-child(2) > .sc-ftvSup > [data-testid="input"]',
     campoEmailDetran: '.ebtNNd > .gurgBP > :nth-child(3) > .sc-ftvSup > [data-testid="input"]',
 
+    // Cadastrar Agentes
+
+    botaoCadastrarAgente: '',
+
+    campoPesquisarAgentes: '',
+    campoPesquisarLupa: '',
+
+    //Dados do agente
+
+    campoNomeCompletoAgentes: '',
+    campoEmailAgentes: '',
+    campoCPFAgentes: '',
+    campoTelefoneAgentes: '',
+
+
+    //Dados Mediante a instituiçao 
+
+    campoInstituiçaoBancariaAgentes: '',
+    campoSupervisorAgentes: '',
+    campoOperadorAgentes: '',
+    
+    botaoAlterarSenha: '',
+    botaoLimparAgentes: '',
+    botaoSalvarAgentes: '',
+
+
 } 

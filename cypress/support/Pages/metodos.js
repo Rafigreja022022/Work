@@ -133,6 +133,17 @@ class Pages {
         cy.screenshot('2_3 - SistemaLogado')
         cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')
             .click()
+        
+        cy.get('.MuiButton-outlined').then(($elemento) => {
+            if ($elemento.is(':visible')) {
+              // Se o elemento for visível, clique nele
+              cy.wrap($elemento).click();
+            } else {
+              // Se o elemento não for visível, clique no link
+              cy.get('.MuiButton-outlined').click();
+            }
+          });
+
         cy.get(el.campoContrato)
             .focus()
             .type(Cypress.env('contrato'))
@@ -278,7 +289,7 @@ class Pages {
         cy.get(el.campoufplaca)
             .focus()
             .type(Cypress.env('ufplaca'))
-        cy.xpath('//*[@id=":r2g:-option-0"]')
+        cy.xpath('//*[@id=":r2j:-option-0"]')
             .click()
         cy.get(el.camporenavam)
             .focus()
@@ -329,11 +340,11 @@ class Pages {
             .type(Cypress.env('numerocredor'))
             .should('be.have', 'numerocredor')
         cy.get(el.campoemailcredor)
-            .focus()
+            //.should('be.visible')
             .type(Cypress.env('emailcredor'))
             .should('be.have', 'emailcredor')
         cy.get(el.campotelefonecredor)
-            .focus()
+            //.should('be.visible')
             .type(Cypress.env('telefonecredor'))
             .should('be.have', 'telefonecredor')
         cy.screenshot('2_10 - Dados Credor')
@@ -357,11 +368,11 @@ class Pages {
             .type(Cypress.env('numerodevedor'))
             .should('be.have', 'numerodevedor')
         cy.get(el.campoemaildevedor)
-            .focus()
+            //.should('be.visible')
             .type(Cypress.env('emaildevedor'))
             .should('be.have', 'emaildevedor')
         cy.get(el.campotelefonedevedor)
-            .focus()
+            //.should('be.visible')
             .type(Cypress.env('telefonedevedor'))
             .should('be.have', 'telefonedevedor')
         cy.screenshot('2_11 - Dados Devedor')
@@ -389,11 +400,11 @@ class Pages {
             .type(Cypress.env('numeroterc'))
             .should('be.have', 'numeroterc')    
         cy  .get(el.campoEmailTerc)
-            .focus()
+            //.should('be.visible')
             .type(Cypress.env('emailterc'))
             .should('be.have', 'emailterc')
         cy  .get(el.campoTelefoneTerc)
-            .focus()
+            //.should('be.visible')
             .type(Cypress.env('telefoneterc'))
             .should('be.have', 'telefoneterc')
         cy  .screenshot('2_13 - Dados Terc Garantidor')
