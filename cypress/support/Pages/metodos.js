@@ -562,6 +562,16 @@ class Pages {
             .type(Cypress.env('contrato'))
         cy  .get('label > .sc-cOFTSb')
         //    .selectfile()
+        // Caminho para o arquivo que deseja enviar
+        // const filePath = 'crlv.jpg';
+        // cy.get('.jvfZKD .input-image').attachFile(filePath);
+
+        // enviar varios arquivos
+        const filesPath = ['crlv.jpg', 'crlv3.jpg'];
+        cy.get('.jvfZKD .input-image').attachFile(filesPath);
+
+        // Insira aqui qualquer código adicional que você queira testar após o envio do arquivo.
+        // Por exemplo, você pode clicar em um botão de envio e verificar se o upload foi bem-sucedido.
         cy  .screenshot('3_5 - Contrato e imagem carregados')
 
         cy  .get('.WGDlc > .sc-cOFTSb')

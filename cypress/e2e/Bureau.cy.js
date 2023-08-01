@@ -24,12 +24,12 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-2 - Registrar Contrato', () => {
+   it('CT-2 - Registrar Contrato', () => {
       Pages.preencherContrato();
    })
 
 
-   it('CT-3 - Enviar Imagens', () => {
+   it.only('CT-3 - Enviar Imagens', () => {
       Pages.EnviarImagens();
    })
 
