@@ -19,7 +19,7 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it.only('CT-1 - Pesquisar', () => {
+   it('CT-1 - Pesquisar', () => {
       Pages.Pesquisar();
    })
 

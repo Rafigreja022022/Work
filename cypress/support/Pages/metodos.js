@@ -155,8 +155,9 @@ class Pages {
         cy.get(el.campoEstado1)
             .focus()
             .type(Cypress.env('estado'))
-        cy.xpath('//*[@id=":r6:-option-1"]')
-            .click()
+            cy.contains('SP - ').click()
+//        cy.xpath('//*[@id=":r6:-option-1"]')
+//            .click()
         cy.get(el.campoTipodaRestricao)
             .focus()
             .type(Cypress.env('tipodarestricao'))
@@ -289,8 +290,9 @@ class Pages {
         cy.get(el.campoufplaca)
             .focus()
             .type(Cypress.env('ufplaca'))
-        cy.xpath('//*[@id=":r2j:-option-0"]')
-            .click()
+            cy.contains('SP - ').click()
+        //cy.xpath('//*[@id=":r2k:-option-0"]')
+        //    .click()
         cy.get(el.camporenavam)
             .focus()
             .type(Cypress.env('renavam'))
@@ -321,33 +323,56 @@ class Pages {
             .should('be.have', 'especie')
         cy.screenshot('2_9 - DadosVeiculos')
 
-        cy.get('.sc-jGprRt > :nth-child(7)')                                      // Dados Credor
-            .click()
-        cy.get(el.camponomecredor)
-            .focus()
-            .type(Cypress.env('nomecredor'))
-            .should('be.have', 'nomecredor')
-        cy.get(el.campocnpjcredor)
-            .focus()
-            .type(Cypress.env('cnpjcredor'))
-            .should('be.have', 'cnpjcredor')
-        cy.get(el.campocepcredor)
-            .focus()
-            .type(Cypress.env('cepcredor'))
-            .should('be.have', 'cepcredor')
-        cy.get(el.camponumerocredor)
-            .focus()
-            .type(Cypress.env('numerocredor'))
-            .should('be.have', 'numerocredor')
-        cy.get(el.campoemailcredor)
-            //.should('be.visible')
-            .type(Cypress.env('emailcredor'))
-            .should('be.have', 'emailcredor')
-        cy.get(el.campotelefonecredor)
-            //.should('be.visible')
-            .type(Cypress.env('telefonecredor'))
-            .should('be.have', 'telefonecredor')
-        cy.screenshot('2_10 - Dados Credor')
+//        cy.get('.sc-jGprRt > :nth-child(7)')                                      // Dados Credor
+//            .click()
+//        cy.get(el.camponomecredor)
+//            .focus()
+//            .type(Cypress.env('nomecredor'))
+//            .should('be.have', 'nomecredor')
+//        cy.get(el.campocnpjcredor)
+//            .focus()
+//            .type(Cypress.env('cnpjcredor'))
+//            .should('be.have', 'cnpjcredor')
+//        cy.get(el.campocepcredor)
+//            .focus()
+//            .type(Cypress.env('cepcredor'))
+//            .should('be.have', 'cepcredor')
+//        cy.get(el.camponumerocredor)
+//            .focus()
+//            .type(Cypress.env('numerocredor'))
+//            .should('be.have', 'numerocredor')
+//        cy.get(el.campoemailcredor)
+//            .should('be.visible')
+//            .type(Cypress.env('emailcredor'))
+//            .should('have.value', Cypress.env('emailcredor'))
+//        cy.get(el.campotelefonecredor)
+//            .should('be.visible')
+//            .type(Cypress.env('telefonecredor'))
+//            .should('have.value', '(12) 3456-7890')
+//        cy.screenshot('2_10 - Dados Credor')
+
+        // Variáveis dos dados do credor
+        const nomeCredor = Cypress.env('nomecredor');
+        const cnpjCredor = Cypress.env('cnpjcredor');
+        const cepCredor = Cypress.env('cepcredor');
+        const numeroCredor = Cypress.env('numerocredor');
+        const emailCredor = Cypress.env('emailcredor');
+        const telefoneCredor = Cypress.env('telefonecredor');
+
+        // Clique no elemento que parece ser 'Dados Credor'
+        cy.get('.sc-jGprRt > :nth-child(7)').click();
+
+        // Preencha os campos do credor
+        cy.get(el.camponomecredor).focus().type(nomeCredor).should('have.value', nomeCredor);
+        cy.get(el.campocnpjcredor).focus().type(cnpjCredor).should('have.value', '85.490.958/0001-60');
+        cy.get(el.campocepcredor).focus().type(cepCredor).should('have.value', '03651-020');
+        cy.get(el.camponumerocredor).focus().type(numeroCredor).should('have.value', numeroCredor);
+        cy.wait(1500);
+        cy.get(el.campoemailcredor).should('be.visible').type('rafael02@email.com.br').should('have.value', 'rafael02@email.com.br');
+        cy.get(el.campotelefonecredor).should('be.visible').type(telefoneCredor).should('have.value', '(12) 3456-7890');
+
+        // Captura de tela
+        cy.screenshot('2_10 - Dados Credor');
 
         cy.get('.sc-jGprRt > :nth-child(8)')                                      // Dados Devedor
             .click()
@@ -366,15 +391,17 @@ class Pages {
         cy.get(el.camponumerodevedor)
             .focus()
             .type(Cypress.env('numerodevedor'))
-            .should('be.have', 'numerodevedor')
+            .should('be.have', 'numerodevedor')  
+        //cy.wait(1500);  
         cy.get(el.campoemaildevedor)
-            //.should('be.visible')
+            .should('be.visible')
+            .wait(1500)
             .type(Cypress.env('emaildevedor'))
-            .should('be.have', 'emaildevedor')
+            .should('have.value', Cypress.env('emaildevedor'))
         cy.get(el.campotelefonedevedor)
-            //.should('be.visible')
+            .should('be.visible')
             .type(Cypress.env('telefonedevedor'))
-            .should('be.have', 'telefonedevedor')
+            .should('have.value', Cypress.env('telefonedevedorMask'))
         cy.screenshot('2_11 - Dados Devedor')
 
         cy.get('.sc-jGprRt > :nth-child(9)')                                      // Imagens
@@ -398,17 +425,19 @@ class Pages {
         cy  .get(el.campoNumeroTerc)
             .focus()
             .type(Cypress.env('numeroterc'))
-            .should('be.have', 'numeroterc')    
+            .should('be.have', 'numeroterc')
+        cy.wait(3000);    
         cy  .get(el.campoEmailTerc)
-            //.should('be.visible')
+            .should('be.visible')
             .type(Cypress.env('emailterc'))
-            .should('be.have', 'emailterc')
+            .should('have.value', Cypress.env('emailterc'))
         cy  .get(el.campoTelefoneTerc)
-            //.should('be.visible')
+            .should('be.visible')
             .type(Cypress.env('telefoneterc'))
-            .should('be.have', 'telefoneterc')
+            .should('have.value', Cypress.env('telefonetercMask'))
         cy  .screenshot('2_13 - Dados Terc Garantidor')
-       cy  .xpath('//*[@type="submit"]')                                    // Enviar Dados
+       
+        cy  .xpath('//*[@type="submit"]')                                    // Enviar Dados
             .click()
         cy  .get('#notistack-snackbar')
             .should('be.visible')
