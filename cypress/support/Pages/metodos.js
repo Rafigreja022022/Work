@@ -391,8 +391,7 @@ class Pages {
         cy.get(el.camponumerodevedor)
             .focus()
             .type(Cypress.env('numerodevedor'))
-            .should('be.have', 'numerodevedor')  
-        //cy.wait(1500);  
+            .should('be.have', 'numerodevedor')    
         cy.get(el.campoemaildevedor)
             .should('be.visible')
             .wait(1500)
@@ -426,7 +425,7 @@ class Pages {
             .focus()
             .type(Cypress.env('numeroterc'))
             .should('be.have', 'numeroterc')
-        cy.wait(3000);    
+        cy.wait(1500);    
         cy  .get(el.campoEmailTerc)
             .should('be.visible')
             .type(Cypress.env('emailterc'))
