@@ -3,9 +3,9 @@ export const ELEMENTS = {
 
     // Login
 
-    campoUserName: ':nth-child(2) > .sc-ftvSup > [data-testid="input"]',
-    campoPassword: ':nth-child(3) > .sc-ftvSup > [data-testid="input"]',
-    botaoLogin: '.cdfHIn > [data-testid="button-component"]',
+    campoUserName: '//*[@id=":r0:"]',
+    campoPassword: '//*[@id=":r1:"]',
+    botaoLogin: '//*[@type="submit"]',
 
 
     // Contratos

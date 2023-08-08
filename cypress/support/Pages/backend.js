@@ -1,4 +1,5 @@
 import { describe } from "mocha";
+import {generate} from "cpf";
 
 describe('BackEnd APIV3', () => {
     it('Realizar login', () => {
@@ -98,6 +99,7 @@ describe('BackEnd APIV3', () => {
                 CustomerKey: 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
             },
             body: {
+                //cpf: generate(false),
                 cpf: '30327047828',
                 senha: '008bd5ad93b754d500338c253d9c1770'
             }

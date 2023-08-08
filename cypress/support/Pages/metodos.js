@@ -116,16 +116,16 @@ class Pages {
             .should('be.equal', 'Bureau - Idea Maker')
         cy.screenshot('2_1 - Pagina Login');
 
-        cy.get(el.campoUserName)
+        cy.xpath(el.campoUserName)
             .should('be.visible')
             .type(Cypress.env('username'))
             .should('be.have', 'username')
-        cy.get(el.campoPassword)
+        cy.xpath(el.campoPassword)
             .should('be.visible')
             .type(Cypress.env('password'))
             .should('be.have', 'password')
         cy.screenshot('2_2 - Dados Login Preenchidos');
-        cy.get(el.botaoLogin)
+        cy.xpath(el.botaoLogin)
             .click()
 
         cy.get('#novo-contrato > .sc-cOFTSb > .sc-dFdIVH > .sc-dsQDmV')          // Dados Contrato
