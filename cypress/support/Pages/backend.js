@@ -91,12 +91,12 @@ describe('BackEnd APIV3', () => {
             headers: {
                 Appid: 'a30cbee34fdf8a75f1166aa15f19a116',
                 AppVersion: '6.5.0',
-                Imei: '353582750487860',
-                ContentType: 'application/json',
-                device: 'Postman',
+                //Imei: '353582750487860',
+                //ContentType: 'application/json',
+                //device: 'Postman',
                 AccessToken: 'NDQ2Yjk2ZDA5MjcwNTUzZWM3ZGRkMDQxMTdmNTNhMmU6TURBek1EQXdNRGt6Tmc9PQ==',
-                CustomerId: '488171a5-d17b-432b-a4b9-f79cb4912bce',
-                CustomerKey: 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
+                //CustomerId: '488171a5-d17b-432b-a4b9-f79cb4912bce',
+                //CustomerKey: 'ZzCtTJKJPYuTnY7dbCtRxCfnDc60RS4rI6ccGnmW'
             },
             body: {
                 //cpf: generate(false),
