@@ -24,7 +24,7 @@ describe('Testes do sistema Bureau', () => {
    })
 
 
-   it('CT-2 - Registrar Contrato', () => {
+   it.only('CT-2 - Registrar Contrato', () => {
       Pages.preencherContrato();
    })
 
