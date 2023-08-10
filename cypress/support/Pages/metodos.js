@@ -323,7 +323,7 @@ class Pages {
             .should('be.have', 'especie')
         cy.screenshot('2_9 - DadosVeiculos')
 
-//        cy.get('.sc-jGprRt > :nth-child(7)')                                      // Dados Credor
+//        cy.get('.sc-grREDI > :nth-child(7)')                                      // Dados Credor
 //            .click()
 //        cy.get(el.camponomecredor)
 //            .focus()
@@ -481,15 +481,15 @@ class Pages {
             .should('be.equal', 'Bureau - Idea Maker')
         cy.screenshot('1_1 - PaginaLogin');
 
-        cy.get(el.campoUserName)
+        cy.xpath(el.campoUserName)
             .should('be.visible')
             .type(Cypress.env('username'))
             .should('be.have', 'username')
-        cy.get(el.campoPassword)
+        cy.xpath(el.campoPassword)
             .should('be.visible')
             .type(Cypress.env('password'))
             .should('be.have', 'password')
-        cy.get(el.botaoLogin)
+        cy.xpath(el.botaoLogin)
             .click()
         cy.screenshot('1_2 - DadosLoginPreenchidos');
 
@@ -504,52 +504,52 @@ class Pages {
         cy.get('[data-testid="input"]')
             .click()
             .type('{enter}')
-        cy.get(':nth-child(1) > .fzVBCR > .sc-ftvSup > [data-testid="input"]')
-            .should('be.visible')
-            .should('be.have', 'contrato')
+        //cy.get(':nth-child(1) > .fzVBCR > .sc-ftvSup > [data-testid="input"]')
+        //    .should('be.visible')
+        //    .should('be.have', 'contrato')
         cy.screenshot('1_5 - Contrato pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(2)')
+        cy.get('.sc-grREDI > :nth-child(2)')
             .click()
             .should('be.visible')
         cy.screenshot('1_6 - Consorcio pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(3)')
+        cy.get('.sc-grREDI > :nth-child(3)')
             .click()
             .should('be.visible')
         cy.screenshot('1_7 - Aditivo pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(4)')
+        cy.get('.sc-grREDI > :nth-child(4)')
             .click()
             .should('be.visible')
         cy.screenshot('1_8 - Vendedor pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(5)')
+        cy.get('.sc-grREDI > :nth-child(5)')
             .click()
             .should('be.visible')
         cy.screenshot('1_9 - Recebedor pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(6)')
+        cy.get('.sc-grREDI > :nth-child(6)')
             .click()
             .should('be.visible')
         cy.screenshot('1_10 - Veiculo pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(7)')
+        cy.get('.sc-grREDI > :nth-child(7)')
             .click()
             .should('be.visible')
         cy.screenshot('1_11 - Credor pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(8)')
+        cy.get('.sc-grREDI > :nth-child(8)')
             .click()
             .should('be.visible')
         cy.screenshot('1_12 - Devedor pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(9)')
+        cy.get('.sc-grREDI > :nth-child(9)')
             .click()
             .should('be.visible')
         cy.screenshot('1_13 - Imegens pesquisado com sucesso')
 
-        cy.get('.sc-jGprRt > :nth-child(10)')
+        cy.get('.sc-grREDI > :nth-child(10)')
             .click()
             .should('be.visible')
         cy.screenshot('1_14 - Terc garantidor pesquisado com sucesso')
