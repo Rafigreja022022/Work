@@ -407,7 +407,7 @@ class Pages {
             .click()
         cy.screenshot('2_12 - Dados Imagens')
 
-        cy  .get('.sc-jGprRt > :nth-child(10)')                                   // Terc. Garantidor
+        cy.get('.sc-grREDI > :nth-child(10)')                                 // Terc. Garantidor
             .click()
         cy  .get(el.campoNomeTerc)
             .focus()
