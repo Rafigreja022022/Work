@@ -128,10 +128,10 @@ class Pages {
         cy.xpath(el.botaoLogin)
             .click()
 
-        cy.get('#novo-contrato > .sc-papXJ > .sc-kjEcyX > .sc-kDDrLX')          // Dados Contrato
+        cy.get('#novo-contrato > .sc-papXJ > .sc-cLFqLo > .sc-kDDrLX')          // Dados Contrato
             .should('be.visible')
         cy.screenshot('2_3 - SistemaLogado')
-        cy.get('#novo-contrato > .sc-papXJ > .sc-kjEcyX > .sc-kDDrLX')
+        cy.get('#novo-contrato > .sc-papXJ > .sc-cLFqLo > .sc-kDDrLX')
             .click()
             .wait(1000)
 
@@ -142,15 +142,15 @@ class Pages {
         //    })
 
 
-        cy.get('#alert-dialog-title')
-        .should('be.visible')
-        .then(($popup) => {
-          if ($popup.find('.MuiButton-outlined').length > 0) {
-            // Clica no botão "Descartar" se estiver visível
-            
-            cy.get('.MuiButton-outlined').click();
-          }
-        });
+        //cy.get('#alert-dialog-title')
+        //.should('be.visible')
+        //.then(($popup) => {
+        //  if ($popup.find('.MuiButton-outlined').length > 0) {
+        //    // Clica no botão "Descartar" se estiver visível
+        //    
+        //    cy.get('.MuiButton-outlined').click();
+        //  }
+        //});
 
         cy.get('.MuiButton-outlined').click();
         cy.get(el.campoContrato)
